@@ -43,7 +43,7 @@ export const AuthContextProvider = (props) => {
   let initialId;
   if (localData) {
     initialToken = localData.token;
-    initialId = localData.userId
+    initialId = localData.userId;
   }
 
   const [token, setToken] = useState(initialToken);
@@ -53,13 +53,13 @@ export const AuthContextProvider = (props) => {
     setToken(null);
     setUserId(null);
     localStorage.removeItem("token");
-    localStorage.removeItem('expirationTime')
+    localStorage.removeItem("expirationTime");
     localStorage.removeItem("userId");
 
     if (logoutTimer) {
       clearTimeout(logoutTimer);
     }
-  },[]);
+  }, []);
 
   const login = (token, expirationTime, userId) => {
     setToken(token);
