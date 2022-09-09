@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, createContext } from "react";
+import { useState, useCallback, createContext } from "react";
 
 let logoutTimer;
 
